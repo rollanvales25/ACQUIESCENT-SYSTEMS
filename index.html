@@ -23,6 +23,45 @@
       color: white;
       padding: 0.5rem 0;
     }
+    header a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+.header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* 👈 this centers text vertically */
+    }
+
+    .header-text h4 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+
+    }
+
+    .header-text .sub {
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .header-text .iso {
+      font-weight: bold;
+    }
+    /* Navigation bar */
+    nav {
+      background-color: #222;
+      padding: 0.5rem 1rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
     .navbar-nav .nav-link.active {
       font-weight: bold;
       color: #FFD700;
@@ -51,16 +90,29 @@
   </style>
 </head>
 <body>
-  <header class="logo-left corner">
-    <h2>
-      <a href="https://www.aqsindia.in" target="_blank">
-        <img src="ok.png" width="200" height="75" alt="Acquiescent Logo">
-      </a>
-    </h2>
+   <header>
+    <a href="https://www.aqsindia.in" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img src="ok.png" width="200" height="75" alt="Acquiescent Logo">
+       
+      <div class="header-text">
+        <h4>&nbsp;ACQUIESCENT SYSTEMS</h4>
+        <div class="sub">
+          &nbsp;ENGINEERING AND INSTRUMENTATION<br>
+          <span class="iso">&nbsp;ISO 9001:2015 CERTIFIED COMPANY</span>
+        </div>
+      </div>
+   <div style="font-weight: bold; font-size: 1rem; text-align: right; color: #000;">
+     &nbsp;&nbsp;&nbsp;&nbsp;• Calibration &nbsp;&nbsp;&nbsp;&nbsp;• Validation &nbsp;&nbsp;&nbsp;&nbsp;• Sales and Service &nbsp;&nbsp;&nbsp;&nbsp;• Repair &nbsp;&nbsp;&nbsp;&nbsp;• Industrial Services
+    </div>
+    </a>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
