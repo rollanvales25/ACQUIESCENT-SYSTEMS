@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,20 +21,88 @@
       color: white;
       padding: 0.5rem 0;
     }
+        header a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-text h4 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .header-text .sub {
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .header-text .iso {
+      font-weight: bold;
+    }
     footer {
       background-color: #f8f9fa;
       text-align: center;
       padding: 1rem;
     }
+     /* === Mobile Responsive Fixes === */
+    @media (max-width: 767.98px) {
+      header a {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-text h4 {
+        font-size: 1.2rem;
+      }
+
+      .header-text .sub {
+        font-size: 0.9rem;
+        line-height: 1.2;
+      }
+
+      .header-text .iso {
+        font-size: 0.9rem;
+      }
+
+      header img {
+        width: 150px !important;
+        height: auto !important;
+      }
+
+      header div[style*="font-weight: bold;"] {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+        margin-top: 0.5rem;
+      }
+    }
   </style>
-</head>
-<body>
-  <header class="logo-left corner">
-    <h2>
-      <a href="https://www.aqsindia.in" target="_blank">
-        <img src="ok.png" width="200" height="75" alt="Acquiescent Logo">
-      </a>
-    </h2>
+  <header>
+    <a href="https://www.aqsindia.in" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img src="ok.png" width="200" height="75" alt="Acquiescent Logo">
+
+      <div class="header-text">
+        <h4>&nbsp;ACQUIESCENT SYSTEMS</h4>
+        <div class="sub">
+          &nbsp;ENGINEERING AND INSTRUMENTATION<br>
+          <span class="iso">&nbsp;ISO 9001:2015 CERTIFIED COMPANY</span>
+        </div>
+      </div>
+
+      <div style="font-weight: bold; font-size: 1rem; text-align: right; color: #000;">
+        &nbsp;&nbsp;&nbsp;&nbsp;• Calibration &nbsp;&nbsp;&nbsp;&nbsp;• Validation &nbsp;&nbsp;&nbsp;&nbsp;• Sales and Service
+        &nbsp;&nbsp;&nbsp;&nbsp;• Repair &nbsp;&nbsp;&nbsp;&nbsp;• Industrial Services
+      </div>
+    </a>
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
