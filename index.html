@@ -32,6 +32,35 @@
 }
 </script>
   <style>
+    .banner {
+  background-color: #99caff;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.banner h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.banner p {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+.banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+  .banner p {
+    font-size: 1rem;
+  }
+}
     header {
       background-color: #99caff;
       color: black;
@@ -176,10 +205,21 @@
     </div>
   </nav>
 
-  <section class="banner">
-    <img src="aa.jpeg" class="img-fluid w-100" alt="Industrial Automation Banner">
-	<p><center>ACQUIESCENT SYSTEMS (AQS) IS ISO 9001:2015 CERTIFIED COMPANY DEALING IN INDUSTRIAL ENGINEERING SERVICES INCLUDING CLEAN ROOM VALIDATION FOR AIR QUALITY AND THERMAL PARAMETERS , SUPPLY AND CALIBRATION OF PROCESS AND MEASURING INSTRUMENTS<br>Please email your requirements to <a href="mailto:sales@aqsindia.in">sales@aqsindia.in</a> ,and our team will assist you promptly.</p>
-  </section>
+  <section class="banner bg-primary py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-uppercase mb-4">
+      Acquiescent Systems (AQS) is an ISO 9001:2015 Certified Company
+    </h2>
+    <p class="lead fw-semibold mb-3">
+      Specializing in validation and temperature mapping services, calibration, instrument supply, and industrial engineering services in Goa.
+    </p>
+    <p class="fw-medium">
+      Please email your requirements to
+      <a href="mailto:sales@aqsindia.in" class="text-white text-decoration-underline fw-bold">sales@aqsindia.in</a>
+      or contact <a href="tel:+919423736453">+91 9423736453</a> and our team will assist you promptly.
+    </p>
+  </div>
+</section>
 	
   <main>
     <section id="products" class="container"><center>
