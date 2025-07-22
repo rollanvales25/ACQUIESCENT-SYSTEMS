@@ -13,6 +13,35 @@
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="/https://aqsindia.in/my-favicon/favicon.ico/site.webmanifest" />
   <style>
+ .banner {
+  background-color: #99caff;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.banner h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.banner p {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+.banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+  .banner p {
+    font-size: 1rem;
+  }
+}
     .blogi1 {
   float: left;
   padding: 10px;
@@ -205,7 +234,18 @@ flex-wrap: nowrap;           /* Don't wrap on desktop */
       </div>
     </div>
   </nav>
-
+	
+<section class="banner bg-primary py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-uppercase mb-4">
+      Got a question?
+    </h2>
+    <p class="lead fw-semibold mb-3">
+      Our team would love to hear from you! Either fill in the form below or use our phone number or email address below.
+    </p>
+  </div>
+</section>
+	
   <main>
     <section class="bg-light py-5">
       <div class="container">
