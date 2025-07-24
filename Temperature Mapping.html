@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acquiescent Systems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="https://aqsindia.in/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="https://aqsindia.in/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="https://aqsindia.in/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://aqsindia.in/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="https://aqsindia.in/favicon/site.webmanifest" />
+
+  <style>
+.underline-heading {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.underline-heading h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-right: 10px;
+  background-color: #fff; /* match your section background */
+}
+
+.underline-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4682b4; /* steel blue or adjust to match your branding */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.instrument-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid black;
+}
+.banner {
+  background-color: #99caff;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.banner h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.banner p {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+.banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+  .banner p {
+    font-size: 1rem;
+  }
+}
+  header {
+      background-color: #99caff;
+      color: black;
+      padding: 0.5rem 0;
+    }
+
+.blogi1 {
+  float: left;
+  padding: 10px;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #333;
+}
+
+.blogi1 h2.what {
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.linka {
+  color: #037CC1;
+  text-decoration: none;
+}
+
+.linka:hover {
+  color: #0077be;
+  text-decoration: underline;
+}
+
+.top {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.topi {
+  display: flex;
+  justify-content: space-between;
+   overflow-x: auto;            /* Allows horizontal scroll if needed */
+flex-wrap: nowrap;           /* Don't wrap on desktop */
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .topi {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .blogi1 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+    header a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-text h4 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .header-text .sub {
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .header-text .iso {
+      font-weight: bold;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #222;
+      padding: 0.5rem 1rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link.active {
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .banner {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    /* === Mobile Responsive Fixes === */
+    @media (max-width: 767.98px) {
+      header a {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-text h4 {
+        font-size: 1.2rem;
+      }
+
+      .header-text .sub {
+        font-size: 0.9rem;
+        line-height: 1.2;
+      }
+
+      .header-text .iso {
+        font-size: 0.9rem;
+      }
+
+      header img {
+        width: 150px !important;
+        height: auto !important;
+      }
+
+      header div[style*="font-weight: bold;"] {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+  <!-- Header -->
+  <header>
+    <a href="https://www.aqsindia.in" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img src="ok.png" width="200" height="75" alt="Acquiescent Logo">
+
+      <div class="header-text">
+        <h4>&nbsp;ACQUIESCENT SYSTEMS</h4>
+        <div class="sub">
+          &nbsp;ENGINEERING AND INSTRUMENTATION<br>
+          <span class="iso">&nbsp;ISO 9001:2015 CERTIFIED COMPANY</span>
+        </div>
+      </div>
+
+      <div style="font-weight: bold; font-size: 1rem; text-align: right; color: #000;">
+        &nbsp;&nbsp;&nbsp;&nbsp;• Calibration &nbsp;&nbsp;&nbsp;&nbsp;• Validation &nbsp;&nbsp;&nbsp;&nbsp;• Sales and Service
+        &nbsp;&nbsp;&nbsp;&nbsp;• Industrial Engineering Services
+      </div>
+    </a>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calibration-goa.html">Calibration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="validation-goa.html">Validation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="thermal valdation-goa.html">Temperature Mapping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="instrument sales.html">Sales and Service</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="industrial engineering.html">Industrial Engineering Service</a>
+          <li class="nav-item">
+            <a class="nav-link" href="about us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<section class="banner bg-primary py-5">
+  <div class="container text-corner">
+    <h2 class="fw-bold text-uppercase mb-4">Temperature Mapping Service In GOA
+    </h2>
+    <p class="lead fw-semibold mb-3">
+
+    </p>
+    <p class="fw-medium">
+<div class="clearfix"></div>
+	</section>
+
+    </p>
+  </div>
+</section>
+
+<section class="py-5" style="font-family: Arial, sans-serif; background-color: #f9f9f9;">
+  <div class="container">
+<div class="underline-heading">
+  <h4>Temperature Mapping</h4>
+</div>
+    <p>
+      Temperature and RH variations in storage and processing environments can compromise product integrity—
+      especially in the pharmaceutical, biotech, food, and healthcare industries. Mapping helps identify hot and cold
+      spots, ensures uniformity, and verifies that your systems meet GMP and other regulatory requirements.
+    </p>
+    <p>
+      At Acquiescent Systems</strong>, we specialize in accurate and compliant temperature and RH (relative humidity)
+      mapping for controlled environments and critical equipment. From compact incubators and cold rooms to high-capacity
+      autoclaves and large-scale storage areas, we deliver fully tailored mapping solutions to match your operational and compliance needs.
+    </p>
+    <p>
+      Whether you require a one-time validation or ongoing requalification, our experienced team ensures minimal disruption
+      and maximum compliance. Already have a protocol? We’ll follow it. Need one developed? We’ll create a robust, audit-ready
+      version specific to your application. With ISO 9001:2015-certified processes, precision instruments, and a client-first approach,
+      we help you stay not just compliant—but ahead.
+    </p>
+<div class="underline-heading">
+  <h4>Compliance-Driven Solution</h4>
+</div>
+      <li>ISO 9001:2015 Quality Management Systems</li>
+      <li>21 CFR Part 11 Compliant Software & Records</li>
+      <li>Traceable to HTM 2010, WHO TRS, EU GMP, and PIC/S Guidelines</li>
+    </ul>
+<br>
+ <div class="underline-heading">
+  <h4>Transparent, Real-Time Reporting</h4>
+</div>
+    <p>We use specialized validation software that provides:</p>
+    <ul>
+      <li>Audit-ready reports with clear summaries</li>
+      <li>Real-time sensor data and diagnostics</li>
+      <li>Secure digital record-keeping and archiving</li>
+    </ul>
+<br>
+ <div class="underline-heading">
+  <h4>Custom-Fit, Turnkey Services</h4>
+</div>
+    <p>
+      Every facility is unique, which is why we provide flexible, customized validation packages—developed and executed by
+      highly trained engineers. Whether you operate a sterile environment or a high-volume warehouse, we tailor our approach
+      to your regulatory and operational needs.
+    </p>
+<br>
+  <div class="underline-heading">
+  <h4>Warehouse & Cold Storage Mapping</h4>
+</div>
+<div class="col-md-4">
+<img src="https://aqsindia.in/images/mapping.jpg" alt="Mechanical Instruments" class="img-fluid"></div>.
+<p>
+      With growing scrutiny from global regulators, it’s essential that warehouses and cold storage areas maintain consistent,
+      validated temperatures. We help you comply with PIC/S Clause 3.19 by implementing accurate, documented environmental controls.
+    </p>
+
+  <div class="underline-heading">
+  <h4>Cost-Effective, Equipment-Free Solutions</h4>
+</div>
+    <ul>
+      <li>We provide all wireless, calibrated sensors</li>
+      <li>No need to purchase or maintain hardware</li>
+      <li>We manage the complete process: protocol, mapping, analysis, and reporting</li>
+    </ul>
+<br>
+  <div class="underline-heading">
+  <h4>What We Validate</h4>
+</div>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Facilities</h5>
+        <ul>
+          <li>Warehouse & Ambient Storage Mapping</li>
+          <li>Cold Rooms, Freezers, ULT Freezers</li>
+          <li>Cleanrooms & Portable Storage Units</li>
+          <li>Temperature & RH Controlled Rooms</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Equipment</h5>
+        <ul>
+          <li>Autoclaves & Steam Sterilizers</li>
+          <li>Dry Heat Ovens & Depyrogenation Units</li>
+          <li>Lyophilizers, Incubators, Cryogenic Freezers</li>
+          <li>Stability Chambers, SIP & CIP Systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="mt-5 text-primary">Enquiry</h3>
+    <p>
+      Need Quote for,
+      high-precision temperature mapping services designed around your facility.
+    </p>
+
+     <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+    </p>
+  </div>
+</section>
+
+</br>
+<div class="top">
+  <div class="topi container">
+  
+    <div class="blogi1" style="width: 250px;">
+      <h2 class="what">Calibration</h2>
+      <p>
+    • <a href="Pressure Instruments.html" class="linka">Pressure Instruments</a><br>
+    • <a href="Thermal Instruments.html" class="linka">Thermal Instruments</a><br>
+    • <a href="Mechanical Instruments.html" class="linka">Mechanical Instruments</a><br>
+    • <a href="Electro-Technical Instruments.html" class="linka">Electro-Technical Instruments</a><br>
+    • <a href="Medical Instruments.html" class="linka">Medical Instruments</a><br>
+    • <a href="Other Process Related.html" class="linka">Other Process Related &nbsp;&nbsp;Instruments</a><br>
+      </p>
+    </div>
+
+    <div class="blogi1" style="width: 200px;">
+      <h2 class="what">Validation</h2>
+      <p>
+         • <a href="Clean Room Validation.html" class="linka">Clean Room Validation</a><br>
+         • <a href="Isolator Validation.html" class="linka">Isolator Validation</a><br>
+         • <a href="LAF Validation.html" class="linka">Biosafety, LAF Validation</a><br>
+         • <a href="PLC Validation.html" class="linka">PLC Validation</a>
+      </p>
+    </div>
+
+<div class="blogi1" style="width: 210px;">
+  <h2 class="what">Sales and Services</h2>
+  <p>
+    • <a href="Process Instruments.html" class="linka">Process Instruments</a><br>
+    • <a href="Laboratory Instruments.html" class="linka">Laboratory Instruments</a><br>
+    • <a href="Engineering Instruments.html" class="linka">Engineering Instruments</a><br>
+    • <a href="Instrument Installation.html" class="linka">Instrument Installation</a><br>
+  </p>
+</div>
+    <div class="blogi1" style="width: 218px;">
+      <h2 class="what">Temperature Mapping</h2>
+      <p>
+         • <a href="Temperature Mapping.html" class="linka">Warehouse Temperature & &nbsp;&nbsp;RH Monitoring</a><br>
+         • <a href="Temperature Mapping.html" class="linka">Autoclaves, Sterilizer &nbsp;&nbsp;Temperature Mapping</a><br>
+         • <a href="Temperature Mapping.html" class="linka">Dry Heat Sterilizer, Ovens &nbsp;&nbsp;Temp Mapping</a><br>
+         • <a href="Temperature Mapping.html" class="linka">Incubator, Cold Room &nbsp;&nbsp;Temperature Mapping</a>
+      </p>
+    </div>
+
+    <div class="blogi1" style="width: 300px;">
+      <h2 class="what">Industrial Engineering Service</h2>
+      <p>
+         • <a href="Industrial Engineering Service.html" class="linka">Annual Maintenance Contracts (AMC)</a><br>
+         • <a href="Industrial Engineering Service.html" class="linka">Commissioning</a><br>
+         • <a href="Industrial Engineering Service.html" class="linka">Customization Of Process Instruments</a><br>
+         • <a href="Industrial Engineering Service.html"class="linka">Panel Wiring</a>
+      </p>
+    </div>
+
+    <div class="clr"></div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Acquiescent Systems</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
