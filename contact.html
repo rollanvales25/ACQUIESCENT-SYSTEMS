@@ -258,8 +258,7 @@ flex-wrap: nowrap;           /* Don't wrap on desktop */
       <p><strong>Email:</strong> <a href="mailto:sales@aqsindia.in">sales@aqsindia.in</a></p>
       <p><strong>Phone:</strong> <a href="tel:+919423736453">+91 9423736453</a></p>
     </div>
-        <form action="https://formspree.io/f/xnnzlnaz" method="POST">
-			<input type="hidden" name="_redirect" value="https://aqsindia.in/Thankyou.html">
+<form id="contactForm" action="https://formspree.io/f/xnnzlnaz" method="POST">
   <div class="row mb-3">
     <div class="col-md-6">
       <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -275,6 +274,27 @@ flex-wrap: nowrap;           /* Don't wrap on desktop */
     <button type="submit" class="btn btn-primary">Send Message</button>
   </div>
 </form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    window.location.href = "https://aqsindia.in/Thankyou.html";
+  } else {
+    alert("There was a problem sending your message. Please try again.");
+  }
+});
+</script>
       </div>
     </section>
   </main>
@@ -345,5 +365,6 @@ flex-wrap: nowrap;           /* Don't wrap on desktop */
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
